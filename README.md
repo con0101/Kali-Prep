@@ -60,6 +60,10 @@ Project: [https://github.com/samratashok/nishang](https://github.com/samratashok
 
 ## Tweaks:
 
+### Thunar Settings (Display Hidden Files, Add "New Tab" Button:
+
+### Bash/ZSH History
+
 ### VIM Settings:
 ```bash
 sudo -u kali rm -f /home/kali/.vimrc
