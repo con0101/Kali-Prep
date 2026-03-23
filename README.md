@@ -61,6 +61,13 @@ Project: [https://github.com/samratashok/nishang](https://github.com/samratashok
 ## Tweaks:
 
 ### Thunar Settings (Display Hidden Files, Add "New Tab" Button:
+```bash
+sudo -u kali env \
+  HOME=/home/kali \
+  XDG_RUNTIME_DIR=/run/user/$(id -u kali) \
+  DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/$(id -u kali)/bus \
+  xfconf-query --channel thunar --property /last-show-hidden --create --type bool --set true
+```
 
 ### Bash/ZSH History
 
