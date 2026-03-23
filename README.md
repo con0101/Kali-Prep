@@ -62,13 +62,8 @@ Project: [https://github.com/samratashok/nishang](https://github.com/samratashok
 
 ### Thunar Settings (Show Hidden Files, Detailed View, and Toolbar Items):
 ```bash
-echo "[*] Tweaks --> Thunar Settings --> Setting 'Show Hidden Files':"
 xfconf-query --channel thunar --property /last-show-hidden --create --type bool --set true
-
-echo "[*] Tweaks --> Thunar Settings --> Setting 'Detailed View':"
 xfconf-query --channel thunar --property /last-view --create --type string --set ThunarDetailsView
-
-echo "[*] Tweaks --> Thunar Settings --> Setting 'Toolbar Items':"
 xfconf-query --channel thunar --property /last-toolbar-items --create --type string --set menu:0,back:1,forward:1,open-parent:1,open-home:1,new-tab:1,new-window:0,toggle-split-view:0,undo:0,redo:0,zoom-out:0,zoom-in:0,zoom-reset:0,view-as-icons:0,view-as-detailed-list:0,view-as-compact-list:0,view-switcher:0,location-bar:1,reload:0,search:1,uca-action-1-1:0,uca-action-3-3:0
 ```
 
@@ -76,11 +71,11 @@ xfconf-query --channel thunar --property /last-toolbar-items --create --type str
 
 ### VIM Settings:
 ```bash
-sudo -u kali rm -f /home/kali/.vimrc
-sudo -u kali echo "filetype plugin on" >> /home/kali/.vimrc
-sudo -u kali echo "syntax on" >> /home/kali/.vimrc
-sudo -u kali echo "set number" >> /home/kali/.vimrc
-sudo -u kali echo "set list" >> /home/kali/.vimrc
+rm -f /home/kali/.vimrc
+echo "filetype plugin on" >> /home/kali/.vimrc
+echo "syntax on" >> /home/kali/.vimrc
+echo "set number" >> /home/kali/.vimrc
+echo "set list" >> /home/kali/.vimrc
 ```
 
 ### Modify `ll` alias to show hidden files in zsh and bash:
