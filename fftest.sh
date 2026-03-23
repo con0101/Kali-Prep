@@ -36,3 +36,4 @@ sudo -u kali sed -i "s/^alias ll=.*/alias ll='ls -lah'/" /home/kali/.bashrc
 sudo curl https://raw.githubusercontent.com/con0101/Kali-Mods/refs/heads/main/firefox/policies.json -o policies.json
 sudo rm /usr/share/firefox-esr/distribution/policies.json
 sudo mv policies.json /usr/share/firefox-esr/distribution/policies.json
+sudo rm /usr/share/firefox-esr/distribution/distribution.ini # TEMP
