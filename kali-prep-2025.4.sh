@@ -95,7 +95,12 @@ git clone https://github.com/swisskyrepo/PayloadsAllTheThings.git /usr/share/Pay
 echo "------> Nishang (Offensive Powershell Framework)"
 git clone https://github.com/samratashok/nishang.git /usr/share/nishang/
 
-echo "--> Tweaks..."
+echo "[*] --> Tweaks..."
+
+echo "[*] -----> Thunar Settings (Show Hidden Files, Detailed View, and Toolbar Items):"
+sudo -u kali env HOME=/home/kali sh -c 'xfconf-query --channel thunar --property /last-show-hidden --create --type bool --set true'
+sudo -u kali env HOME=/home/kali sh -c 'xfconf-query --channel thunar --property /last-view --create --type string --set ThunarDetailsView'
+sudo -u kali env HOME=/home/kali sh -c 'xfconf-query --channel thunar --property /last-toolbar-items --create --type string --set menu:0,back:1,forward:1,open-parent:1,open-home:1,new-tab:1,new-window:0,toggle-split-view:0,undo:0,redo:0,zoom-out:0,zoom-in:0,zoom-reset:0,view-as-icons:0,view-as-detailed-list:0,view-as-compact-list:0,view-switcher:0,location-bar:1,reload:0,search:1,uca-action-1-1:0,uca-action-3-3:0'
 
 echo "------> VIM Settings..."
 sudo -u kali env HOME=/home/kali sh -c '
