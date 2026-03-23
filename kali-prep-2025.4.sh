@@ -98,15 +98,14 @@ git clone https://github.com/samratashok/nishang.git /usr/share/nishang/
 echo "--> Tweaks..."
 
 echo "------> VIM Settings..."
-sudo -u kali env \
-  HOME=/home/kali \
-  XDG_RUNTIME_DIR=/run/user/$(id -u kali) \
-  DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/$(id -u kali)/bus \
-  rm -f /home/kali/.vimrc && \
-  echo "filetype plugin on" >> /home/kali/.vimrc && \
-  echo "syntax on" >> /home/kali/.vimrc && \
-  echo "set number" >> /home/kali/.vimrc && \
-  echo "set list" >> /home/kali/.vimrc
+sudo -u kali env HOME=/home/kali sh -c '
+cat > "$HOME/.vimrc" <<EOF
+filetype plugin on
+syntax on
+set number
+set list
+EOF
+'
 
 echo "------> Modify ll alias to show hidden files in zsh and bash..."
 sudo -u kali sed -i "s/^alias ll=.*/alias ll='ls -lah'/" /home/kali/.zshrc
