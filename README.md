@@ -60,13 +60,28 @@ Project: [https://github.com/samratashok/nishang](https://github.com/samratashok
 
 ## Tweaks:
 
-### Thunar Settings (Display Hidden Files, Add "New Tab" Button:
+### Thunar Settings (Show Hidden Files, Detailed View, and Toolbar Items):
 ```bash
+echo "[*] Tweaks --> Thunar Settings --> Setting 'Show Hidden Files':"
 sudo -u kali env \
   HOME=/home/kali \
   XDG_RUNTIME_DIR=/run/user/$(id -u kali) \
   DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/$(id -u kali)/bus \
   xfconf-query --channel thunar --property /last-show-hidden --create --type bool --set true
+
+echo "[*] Tweaks --> Thunar Settings --> Setting 'Detailed View':"
+sudo -u kali env \
+  HOME=/home/kali \
+  XDG_RUNTIME_DIR=/run/user/$(id -u kali) \
+  DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/$(id -u kali)/bus \
+  xfconf-query --channel thunar --property /last-view --create --type string --set ThunarDetailsView
+
+echo "[*] Tweaks --> Thunar Settings --> Setting 'Toolbar Items':"
+sudo -u kali env \
+  HOME=/home/kali \
+  XDG_RUNTIME_DIR=/run/user/$(id -u kali) \
+  DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/$(id -u kali)/bus \
+  xfconf-query --channel thunar --property /last-toolbar-items --create --type string --set menu:0,back:1,forward:1,open-parent:1,open-home:1,new-tab:1,new-window:0,toggle-split-view:0,undo:0,redo:0,zoom-out:0,zoom-in:0,zoom-reset:0,view-as-icons:0,view-as-detailed-list:0,view-as-compact-list:0,view-switcher:0,location-bar:1,reload:0,search:1,uca-action-1-1:0,uca-action-3-3:0
 ```
 
 ### Bash/ZSH History
