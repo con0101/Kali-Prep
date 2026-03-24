@@ -74,7 +74,7 @@ sudo -u kali env DISPLAY=:0 xfconf-query -c xfce4-screensaver -p /lock/enabled -
 sudo -u kali env DISPLAY=:0 xset s off -dpms s noblank
 ```
 
-### Bash/ZSH History Increased Size:
+### Bash/Zsh History Increased Size:
 
 ### VIM Settings:
 ```bash
