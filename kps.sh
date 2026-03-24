@@ -63,6 +63,13 @@ sudo -u kali env DISPLAY=:0 xfconf-query -c xfce4-screensaver -p /saver/enabled 
 sudo -u kali env DISPLAY=:0 xfconf-query -c xfce4-screensaver -p /lock/enabled -n -t bool -s false
 sudo -u kali env DISPLAY=:0 xset s off -dpms s noblank
 
+echo "[*] -----> Bash/Zsh History Increased Size:"
+ensure_file_key_value "/home/kali/.bashrc" "HISTSIZE" "1000000"
+ensure_file_key_value "/home/kali/.bashrc" "HISTFILESIZE" "2000000"
+ensure_file_key_value "/home/kali/.zshrc" "HISTSIZE" "1000000"
+ensure_file_key_value "/home/kali/.zshrc" "SAVEHIST" "1000000"
+chown "kali:kali" "/home/kali/.bashrc" "/home/kali/.zshrc"
+
 echo "------> VIM Settings..."
 sudo -u kali env HOME=/home/kali sh -c '
 cat > "$HOME/.vimrc" <<EOF
