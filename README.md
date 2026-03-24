@@ -67,14 +67,14 @@ xfconf-query --channel thunar --property /last-view --create --type string --set
 xfconf-query --channel thunar --property /last-toolbar-items --create --type string --set menu:0,back:1,forward:1,open-parent:1,open-home:1,new-tab:1,new-window:0,toggle-split-view:0,undo:0,redo:0,zoom-out:0,zoom-in:0,zoom-reset:0,view-as-icons:0,view-as-detailed-list:0,view-as-compact-list:0,view-switcher:0,location-bar:1,reload:0,search:1,uca-action-1-1:0,uca-action-3-3:0
 ```
 
-### Display Settings (Disable Screenlocking and Screensaver)
+### Display Settings (Disable Screenlocking and Screensaver):
 ```bash
 sudo -u kali env DISPLAY=:0 xfconf-query -c xfce4-screensaver -p /saver/enabled -n -t bool -s false
 sudo -u kali env DISPLAY=:0 xfconf-query -c xfce4-screensaver -p /lock/enabled -n -t bool -s false
 sudo -u kali env DISPLAY=:0 xset s off -dpms s noblank
 ```
 
-### Bash/ZSH History
+### Bash/ZSH History Increased Size:
 
 ### VIM Settings:
 ```bash
