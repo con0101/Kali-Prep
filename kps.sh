@@ -33,7 +33,11 @@ ensure_file_key_value() {
     fi
 }
 
-
+# Backup Files:
+cp /home/kali/.bashrc /home/kali/.bashrc.bak
+cp /home/kali/.zshrc /home/kali/.zshrc.bak
+cp /home/kali/.vim /home/kali/.vim.bak
+chown "kali:kali" "/home/kali/.bashrc.bak" "/home/kali/.zshrc.bak" "/home/kali/.vim.bak"
 
 
 
