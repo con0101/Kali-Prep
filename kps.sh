@@ -46,25 +46,13 @@ ensure_file_key_value() {
 
 
 
-echo "--> Updating APT..."
-#apt update
-echo "--> Upgrading Kali..."
-#apt upgrade -y
-
-echo "--> Installing General Packages..."
-# REMOVED TO TEST OTHER CODE
-
-
-echo "--> Local Copies of Common Tools/Utilities..."
-
-echo "------> Privilege Escalation Awesome Scripts SUITE new generation (PEASS-ng)"
-#git clone https://github.com/swisskyrepo/PayloadsAllTheThings.git /usr/share/PayloadsAllTheThings/
-
-echo "------> Nishang (Offensive Powershell Framework)"
-#git clone https://github.com/samratashok/nishang.git /usr/share/nishang/
-
+echo "[*] --> Updating APT..." #apt update
+echo "[*] --> Upgrading Kali..." #apt upgrade -y
+echo "[*] --> Installing General Packages..." # REMOVED TO TEST OTHER CODE
+echo "[*] --> Local Copies of Common Tools/Utilities..."
+echo "[*] ------> Privilege Escalation Awesome Scripts SUITE new generation (PEASS-ng)" #git clone https://github.com/swisskyrepo/PayloadsAllTheThings.git /usr/share/PayloadsAllTheThings/
+echo "[*] ------> Nishang (Offensive Powershell Framework)" #git clone https://github.com/samratashok/nishang.git /usr/share/nishang/
 echo "[*] --> Tweaks..."
-
 echo "[*] -----> Thunar Settings (Show Hidden Files, Detailed View, and Toolbar Items):"
 sudo -u kali env HOME=/home/kali sh -c 'xfconf-query --channel thunar --property /last-show-hidden --create --type bool --set true'
 sudo -u kali env HOME=/home/kali sh -c 'xfconf-query --channel thunar --property /last-view --create --type string --set ThunarDetailsView'
