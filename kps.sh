@@ -75,7 +75,7 @@ ensure_file_key_value "/home/kali/.zshrc" "HISTSIZE" "1000000"
 ensure_file_key_value "/home/kali/.zshrc" "SAVEHIST" "1000000"
 chown "kali:kali" "/home/kali/.bashrc" "/home/kali/.zshrc"
 
-echo "------> VIM Settings..."
+echo "[*] -----> VIM Settings:"
 sudo -u kali env HOME=/home/kali sh -c '
 cat > "$HOME/.vimrc" <<EOF
 filetype plugin on
@@ -85,11 +85,11 @@ set list
 EOF
 '
 
-echo "------> Modify ll alias to show hidden files in zsh and bash..."
+echo "[*] -----> Modify ll alias to show hidden files in zsh and bash..."
 sudo -u kali sed -i "s/^alias ll=.*/alias ll='ls -lah'/" /home/kali/.zshrc
 sudo -u kali sed -i "s/^alias ll=.*/alias ll='ls -lah'/" /home/kali/.bashrc
 
-echo "------> GEF (GDB Enhanced Features)..."
+echo "[*] -----> GEF (GDB Enhanced Features):"
 #sudo -u kali wget -O /home/kali/.gdbinit-gef.py -q https://gef.blah.cat/py
 #sudo -u kali echo source /home/kali/.gdbinit-gef.py >> /home/kali/.gdbinit
 echo "Script Complete"
