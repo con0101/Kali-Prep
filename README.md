@@ -2,6 +2,9 @@
 
 This repository is used to customize Kali Linux to my preferred configuration and standards.
 
+## Install:
+`TEMP`
+
 ## General Packages:
 
 |Package:  |Script: |Description:                                   |Install/Upgrade:                            |Links:                                                     |
