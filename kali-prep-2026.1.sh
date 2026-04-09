@@ -86,7 +86,8 @@ END_COMMENT
 
 echo "[*] --> Updating APT:"
 apt update -q
-echo "[*] --> Upgrading Kali:" #apt upgrade -y
+echo "[*] --> Upgrading Kali:"
+#apt upgrade -y
 echo "[*] --> Installing General Packages:"
 echo "[*] -----> gdb:"
 apt install -q -y gdb gdb-doc gdbserver libc-dbg
