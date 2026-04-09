@@ -109,3 +109,8 @@ add policies.json restricting Firefox from AI and adding various bookmoarks
 /usr/share/firefox-esr/distribution/policies.json
 ```
 
+## Post Install:
+ - Configure FoxyProxy
+ - Add Burp Certificate to Firefox Certificate Store
+
+
