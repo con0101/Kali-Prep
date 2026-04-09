@@ -1,14 +1,6 @@
-# Kali-Mods
+# Kali-Prep
 
 This repository is used to customize Kali Linux to my preferred configuration and standards.
-
-
-
-
-
-
-
-
 
 ## General Packages:
 
@@ -107,9 +99,8 @@ echo source /home/kali/.gdbinit-gef.py >> /home/kali/.gdbinit
 ```
 
 ## Firefox:
+```
+add policies.json restricting Firefox from AI and adding various bookmoarks
+/usr/share/firefox-esr/distribution/policies.json
+```
 
-### Default Settings:
-
-### BurpSuite Certificate Import & FoxyProxy:
-
-### Bookmarks:
