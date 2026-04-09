@@ -3,7 +3,9 @@
 This repository is used to customize Kali Linux to my preferred configuration and standards.
 
 ## Install:
-`TEMP`
+```
+curl -o kali-prep-2026.1.sh https://raw.githubusercontent.com/con0101/Kali-Prep/refs/heads/main/kali-prep-2026.1.sh && chmod +x kali-prep-2026.1.sh && sudo ./kali-prep-2026.1.sh
+```
 
 ## General Packages:
 
