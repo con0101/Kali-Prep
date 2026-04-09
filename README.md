@@ -75,6 +75,14 @@ xset s off -dpms s noblank
 ```
 
 ### Bash/Zsh History Increased Size:
+```
+File: "/home/kali/.bashrc"
+  "HISTSIZE" "1000000"
+  "HISTFILESIZE" "2000000"
+File: "/home/kali/.zshrc"
+  "HISTSIZE" "1000000"
+  "SAVEHIST" "1000000"
+```
 
 ### VIM Settings:
 ```bash
