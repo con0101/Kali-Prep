@@ -69,9 +69,9 @@ xfconf-query --channel thunar --property /last-toolbar-items --create --type str
 
 ### Display Settings (Disable Screenlocking and Screensaver):
 ```bash
-sudo -u kali env DISPLAY=:0 xfconf-query -c xfce4-screensaver -p /saver/enabled -n -t bool -s false
-sudo -u kali env DISPLAY=:0 xfconf-query -c xfce4-screensaver -p /lock/enabled -n -t bool -s false
-sudo -u kali env DISPLAY=:0 xset s off -dpms s noblank
+xfconf-query -c xfce4-screensaver -p /saver/enabled -n -t bool -s false
+xfconf-query -c xfce4-screensaver -p /lock/enabled -n -t bool -s false
+xset s off -dpms s noblank
 ```
 
 ### Bash/Zsh History Increased Size:
@@ -87,15 +87,15 @@ echo "set list" >> /home/kali/.vimrc
 
 ### Modify `ll` alias to show hidden files in zsh and bash:
 ```bash
-sudo -u kali sed -i "s/^alias ll=.*/alias ll='ls -lah'/" /home/kali/.zshrc
-sudo -u kali sed -i "s/^alias ll=.*/alias ll='ls -lah'/" /home/kali/.bashrc
+sed -i "s/^alias ll=.*/alias ll='ls -lah'/" /home/kali/.zshrc
+sed -i "s/^alias ll=.*/alias ll='ls -lah'/" /home/kali/.bashrc
 ```
 
 ### GEF (GDB Enhanced Features):
 Project: [https://github.com/hugsy/gef](https://github.com/hugsy/gef)
 ```bash
-sudo -u kali wget -O /home/kali/.gdbinit-gef.py -q https://gef.blah.cat/py
-sudo -u kali echo source /home/kali/.gdbinit-gef.py >> /home/kali/.gdbinit
+wget -O /home/kali/.gdbinit-gef.py -q https://gef.blah.cat/py
+echo source /home/kali/.gdbinit-gef.py >> /home/kali/.gdbinit
 ```
 
 ## Firefox:
