@@ -152,8 +152,10 @@ apt install -q -y enum4linux
 echo "[*] -----> burpsuite:"
 apt install -q -y burpsuite
 echo "[*] --> Local Copies of Common Tools/Utilities:"
-echo "[*] -----> Privilege Escalation Awesome Scripts SUITE new generation (PEASS-ng):" #git clone https://github.com/swisskyrepo/PayloadsAllTheThings.git /usr/share/PayloadsAllTheThings/
-echo "[*] -----> Nishang (Offensive Powershell Framework):" #git clone https://github.com/samratashok/nishang.git /usr/share/nishang/
+echo "[*] -----> Privilege Escalation Awesome Scripts SUITE new generation (PEASS-ng):"
+git clone https://github.com/swisskyrepo/PayloadsAllTheThings.git /usr/share/PayloadsAllTheThings/
+echo "[*] -----> Nishang (Offensive Powershell Framework):"
+git clone https://github.com/samratashok/nishang.git /usr/share/nishang/
 echo "[*] --> Tweaks:"
 echo "[*] -----> Thunar Settings (Show Hidden Files, Detailed View, and Toolbar Items):"
 run_as_user xfconf-query --channel thunar --property /last-show-hidden --create --type bool --set true
