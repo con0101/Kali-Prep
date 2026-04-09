@@ -47,19 +47,14 @@
 			{
 				"Title": "CyberChef",
 				"URL": "file:///usr/lib/cyberchef/index.html",
-				"Placement": "toolbar"
-			},
-			{
-				"Title": "Google",
-				"URL": "https://www.google.com",
-				"Favicon": "https://www.google.com",
 				"Placement": "toolbar",
-				"Folder": "My Work Links/Test"
+				"Folder": "Tools"
 			},
 			{
-				"Title": "Mozilla Support",
-				"URL": "https://support.mozilla.org",
-				"Placement": "menu"
+				"Title": "BurpSuite CA",
+				"URL": "http://burpsuite",
+				"Placement": "toolbar",
+				"Folder": "Tools"
 			}
 		]
 	}
