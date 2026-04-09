@@ -195,6 +195,8 @@ echo "[*] --> Firefox:"
 echo "[*] -----> Adding policies.json (inc Bookmarks, Settings):"
 cp /usr/share/firefox-esr/distribution/policies.json ${BACKUP_DIRECTORY}/firefox-esr-policies.json
 cp /usr/share/firefox-esr/distribution/policies.json /usr/share/firefox-esr/distribution/policies.json.bak
+cp /usr/share/firefox-esr/distribution/distribution.ini ${BACKUP_DIRECTORY}/firefox-esr-distribution.ini
+mv /usr/share/firefox-esr/distribution/distribution.ini /usr/share/firefox-esr/distribution/distribution.ini.bak
 echo ${FIREFOX_POLICIES} | base64 -d > /usr/share/firefox-esr/distribution/policies.json
 
 
